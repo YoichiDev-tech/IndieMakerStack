@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ink: #14121a;
+  --color-paper: #fdfcfa;
+  --color-amber: #f5a623;
+  --color-coral: #ff6b5b;
+  --color-violet: #7c5cff;
+}
