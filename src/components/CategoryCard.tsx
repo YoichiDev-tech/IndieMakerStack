@@ -5,15 +5,13 @@ interface CategoryCardProps {
   category: Category;
 }
 
-// Displays a single category as a clickable card. Navigates to the
-// home page pre-filtered to this category via a query parameter.
 export default function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link
       to={`/?category=${encodeURIComponent(category.name)}`}
-      className="block rounded-lg border border-gray-200 p-4 text-center transition hover:border-gray-400"
+      className="block rounded-xl border border-ink/8 bg-white p-4 text-center shadow-card transition-all hover:-translate-y-0.5 hover:shadow-card-hover"
     >
-      <span className="text-sm font-medium text-gray-900">
+      <span className="font-display text-sm font-semibold text-ink">
         {category.name}
       </span>
     </Link>

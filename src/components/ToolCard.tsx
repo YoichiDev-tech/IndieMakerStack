@@ -5,21 +5,21 @@ interface ToolCardProps {
   tool: Tool;
 }
 
-// Displays a single tool as a card. Links to the tool's detail page,
-// not directly to the external link, so users see full context first.
 export default function ToolCard({ tool }: ToolCardProps) {
   return (
     <Link
       to={`/tools/${tool.id}`}
-      className="block rounded-lg border border-gray-200 p-4 transition hover:border-gray-400"
+      className="block rounded-xl border border-ink/8 bg-white p-4 shadow-card transition-all hover:-translate-y-0.5 hover:shadow-card-hover"
     >
       <div className="flex items-start justify-between gap-2">
-        <h3 className="text-base font-medium text-gray-900">{tool.name}</h3>
-        <span className="whitespace-nowrap rounded-full border border-gray-200 px-2 py-0.5 text-xs text-gray-500">
+        <h3 className="font-display text-base font-semibold text-ink">
+          {tool.name}
+        </h3>
+        <span className="whitespace-nowrap rounded-full bg-amber/12 px-2 py-0.5 font-mono text-[11px] font-medium text-amber-700">
           {tool.category}
         </span>
       </div>
-      <p className="mt-2 line-clamp-2 text-sm text-gray-600">
+      <p className="mt-2 line-clamp-2 text-sm text-ink/60">
         {tool.description}
       </p>
     </Link>

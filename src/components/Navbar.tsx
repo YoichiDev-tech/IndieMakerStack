@@ -1,19 +1,20 @@
 import { NavLink } from "react-router-dom";
 import { Logo } from "./Logo";
 
-// Simple top navigation bar. No branding or logo, just text links.
 const linkClasses = ({ isActive }: { isActive: boolean }) =>
-  `text-sm font-medium ${
-    isActive ? "text-gray-900" : "text-gray-500 hover:text-gray-900"
+  `text-sm font-medium transition-colors ${
+    isActive ? "text-ink" : "text-ink/50 hover:text-ink"
   }`;
 
 export default function Navbar() {
   return (
-    <header className="border-b border-gray-200">
+    <header className="sticky top-0 z-30 border-b border-ink/10 bg-paper/80 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4">
-        <Logo />
-        <NavLink to="/" className="text-base font-semibold text-gray-900">
-          PrismStack
+        <NavLink to="/" className="flex items-center gap-2.5">
+          <Logo />
+          <span className="font-display text-base font-semibold tracking-tight text-ink">
+            PrismStack
+          </span>
         </NavLink>
         <nav className="flex items-center gap-6">
           <NavLink to="/" end className={linkClasses}>

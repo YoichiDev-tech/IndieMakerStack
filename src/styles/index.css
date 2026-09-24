@@ -9,3 +9,13 @@
   --color-coral: #ff6b5b;
   --color-violet: #7c5cff;
 }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(600px circle at 0% 0%, rgba(245, 166, 35, 0.06), transparent 60%),
+    radial-gradient(600px circle at 100% 0%, rgba(124, 92, 255, 0.05), transparent 60%);
+  background-attachment: fixed;
+}
